@@ -13,11 +13,12 @@ public class Factorial {
 		System.out.println("Enter a number between 1 and 20 inclusive.");
 		while (max < 1 || max >= 21) {
 			max = TextIO.getlnInt();
+			if (1 < max && max > 20);
 		}
-		long i = 1, given = 1;
-		while (max != i ++){
-			given = given*i;
+			long i = 1, given = 1;
+			while (max != i ++){
+				given = given*i;
 		}
-		TextIO.putln(given);
+		TextIO.putln(max + "! = " + given);
 	}
 }
