@@ -23,6 +23,5 @@ public class Winner {
 			TextIO.putln("b");
 		if (c > a && c > b)
 			TextIO.putln("c");
-		// the logic and text output need further work...
 	}
 }
