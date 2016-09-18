@@ -1,0 +1,12 @@
+Path: work/students/kevinc3/Challenge2-Hollywood
+Working Copy Root Path: /class/cs125/fa16-cs125/_class/_private/Autograder/work/students
+URL: https://subversion.ews.illinois.edu/svn/fa16-cs125/kevinc3/Challenge2-Hollywood
+Repository Root: https://subversion.ews.illinois.edu/svn/fa16-cs125
+Repository UUID: d6886180-81a5-43a1-86a0-6ff1f76a6444
+Revision: 9963
+Node Kind: directory
+Schedule: normal
+Last Changed Author: kevinc3
+Last Changed Rev: 9279
+Last Changed Date: 2016-09-16 14:16:59 -0500 (Fri, 16 Sep 2016)
+
