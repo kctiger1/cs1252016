@@ -6,6 +6,7 @@ import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
  * TODO: add your netid to the line below
  * @author kevinc3
  */
+@SuppressWarnings("unused")
 public class FindScriptLine {
 
 	public static void main(String[] args) {
@@ -23,9 +24,11 @@ public class FindScriptLine {
 		TextIO.readFile("thematrix.txt");
 		
 		System.out.println("Searching for " + "'" + word + "'");
+		
 		word = word.toLowerCase();
 		output = false;
 		int counter = 0;
+		
 		while (false == TextIO.eof()){
 			
 			String line = TextIO.getln();
@@ -42,7 +45,7 @@ public class FindScriptLine {
 				if (line.contains(word))
 					TextIO.putln(counter + " - " + line);					
 				
-					
+			
 			}
 			
 		}
