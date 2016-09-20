@@ -1,4 +1,4 @@
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
+
 
 /**
  * A program to search for specific lines and print their line number.
@@ -6,7 +6,6 @@ import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
  * TODO: add your netid to the line below
  * @author kevinc3
  */
-@SuppressWarnings("unused")
 public class FindScriptLine {
 
 	public static void main(String[] args) {
@@ -40,16 +39,16 @@ public class FindScriptLine {
 			if (line.indexOf(word) >= 0)
 				output = true;				
 			
-			if (output){
-				line = line.trim();
-				if (line.contains(word))
-					TextIO.putln(counter + " - " + line);					
-				
+				if (output){
+					line = line.trim();
+					if (line.contains(word))
+						TextIO.putln(counter + " - " + line);					
+				}	
 			
-			}
+			
 			
 		}
 		System.out.println("Done Searching for " + "'" + word + "'");
-	
+		
 	}
 }
