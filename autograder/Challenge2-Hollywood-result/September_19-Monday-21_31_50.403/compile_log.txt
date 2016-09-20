@@ -1,0 +1,6 @@
+    [javac] Compiling 16 source files to .
+    [javac] ./FindScriptLine.java:1: error: package com.sun.xml.internal.ws.policy.privateutil.PolicyUtils does not exist
+    [javac] import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
+    [javac]                                                              ^
+    [javac] 1 error
+    [javac] Compile failed; see the compiler error output for details.
