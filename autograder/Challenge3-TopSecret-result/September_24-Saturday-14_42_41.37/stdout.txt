@@ -1,0 +1,145 @@
+.E.E.E.E.E.E.E.E.E.F.......F.F.F.F.F..F.F.F.F.F.F
+Time: 0.045
+There were 9 errors:
+1) testEncryptSimplest(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testEncryptSimplest(CaesarCipherTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+2) testRot13UpperLowerCase(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testRot13UpperLowerCase(CaesarCipherTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+3) testDecrypt(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testDecrypt(CaesarCipherTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+4) testSkipPunctutation(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testSkipPunctutation(CaesarCipherTest.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+5) testDecryptMultipleLines(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testDecryptMultipleLines(CaesarCipherTest.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+6) testPositionShift(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testPositionShift(CaesarCipherTest.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+7) testDecodePositionShift(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testDecodePositionShift(CaesarCipherTest.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+8) testCompletes(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testCompletes(CaesarCipherTest.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+9) testCheckInputValues(CaesarCipherTest)java.lang.RuntimeException: Et tu Brutus?
+	at CaesarCipher.main(CaesarCipher.java:16)
+	at CaesarCipherTest.testCheckInputValues(CaesarCipherTest.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+There were 12 failures:
+1) testAuthorship(CaesarCipherTest)junit.framework.AssertionFailedError: Fix authorship
+	at CaesarCipherTest.testAuthorship(CaesarCipherTest.java:126)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+2) testAuthorship(OddSumTest)junit.framework.AssertionFailedError: Fix authorship
+	at OddSumTest.testAuthorship(OddSumTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+3) testOddSum5(OddSumTest)junit.framework.AssertionFailedError: Fix line 1
+	at OddSumTest.testOddSum5(OddSumTest.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+4) testOddSumEven(OddSumTest)junit.framework.AssertionFailedError: Fix line 1
+	at OddSumTest.testOddSumEven(OddSumTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+5) testOddSumOdd(OddSumTest)junit.framework.AssertionFailedError: Fix line 1
+	at OddSumTest.testOddSumOdd(OddSumTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+6) testMixedCase(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testMixedCase(CipherBreakerTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+7) testDigitsAndSpace(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testDigitsAndSpace(CipherBreakerTest.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+8) testIgnoreOtherPunctuation(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testIgnoreOtherPunctuation(CipherBreakerTest.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+9) testPunctuation(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testPunctuation(CipherBreakerTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+10) testTheWorks(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testTheWorks(CipherBreakerTest.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+11) testAuthorship(CipherBreakerTest)junit.framework.AssertionFailedError: Fix authorship
+	at CipherBreakerTest.testAuthorship(CipherBreakerTest.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+12) testUpperCase(CipherBreakerTest)junit.framework.AssertionFailedError: incorrect output on line 3
+	at CipherBreakerTest.testUpperCase(CipherBreakerTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+
+FAILURES!!!
+Tests run: 28,  Failures: 12,  Errors: 9
+
+7 passed out of 28
+Score=25
