@@ -1,7 +1,7 @@
 /**
  * Prints sum of odd numbers in a specific format.
  * TODO: add your netid to the line below
- * @author put-your-netid-here
+ * @author kevinc3
  */
 public class OddSum { 
 /**
@@ -17,6 +17,46 @@ Max?
 
  */
  public static void main(String[] args) { 
-
+	 int input = 0;
+	 TextIO.putln("Max?");
+	 input = TextIO.getlnInt();
+	 int odd = 0;
+	 int add;
+	 int sum = 0;
+	 for (;odd<=input;odd++){
+		 if (odd == 1){
+			 TextIO.put("1");
+		 }
+		 if (odd % 2 == 1 && odd > 1){
+	 		add = odd;
+	 		sum += add;
+	 		
+	 		TextIO.put(" + " + add);
+	 		
+	 	
+	 }
+		 
+	 }
+	 sum += 1;
+	 TextIO.putln(" = " + sum);
+	 TextIO.put(sum + " = ");
+	 for(;odd != 1;){
+		 if (odd %2 == 1){
+			 odd-=2;
+			 if (odd != 1){
+			 TextIO.put(odd + " + ");
+			 }
+		 }
+		 if (odd%2 != 1){
+			odd--;
+			TextIO.put(odd + " + ");
+		 }
+		 
+	 }
+	 
+	
+	 System.out.println(odd); 
+	 
+	 
   } // end of main method
 } // end of class 
