@@ -28,7 +28,6 @@ public class CipherBreaker {
 			if(cipher[i]==cipher[k])
 				f = 1;
 			}	//end duplicate for
-			
 			if(f==-1 && cipher[i]>=65 && cipher[i]<=90){
 			   System.out.println(cipher[i] +":" + s);
 			}
