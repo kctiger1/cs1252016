@@ -3,7 +3,7 @@
  *
  * Todo: Put your netid (i.e. username) in the line below
  * 
- * @author put-your-netid-here
+ * @author kevinc3
  */
 public class PixelEffects {
 
@@ -11,7 +11,14 @@ public class PixelEffects {
 	public static int[][] copy(int[][] source) {
 		// Create a NEW 2D integer array and copy the colors across
 		// See redeye code below
-		return null; // Fix Me
+		int[][]copy = new int [source.length][];
+		for (int i=0;i<source.length;i++){
+			int[]aSource = source[i];
+			int aLength = aSource.length;
+			copy[i] = new int [aLength];
+			System.arraycopy(aSource,0,copy[i],0,aLength);
+		}
+		return copy;
 	}
 	/**
 	 * Resize the array image to the new width and height
@@ -23,7 +30,18 @@ public class PixelEffects {
 	 * @return
 	 */
 	public static int[][] resize(int[][] source, int newWidth, int newHeight) {
-		return null; // Fix Me
+		int sourceWidth=source.length;
+		int sourceHeight=source[0].length;
+		int[][] resize=new int[newWidth][newHeight];
+		
+		for(int width = 0;width<newWidth;width++){
+			for (int height= 0; height<newHeight;height++){
+				int resizeHeight = (int)((height/(double)newHeight)*sourceHeight);
+				int resizeWidth = (int)((width/(double)newWidth)*sourceWidth);
+				resize[width][height]=source[resizeWidth][resizeHeight];
+			}
+		}
+		return resize; 
 		// Hints: Use two nested for loops between 0... newWidth-1 and 0.. newHeight-1 inclusive.
 		// Hint: You can just use relative proportion to calculate the x (or y coordinate)  in the original image.
 		// For example if you're setting a pixel halfway across the image, you should be reading half way across the original image too.
@@ -34,7 +52,7 @@ public class PixelEffects {
 	 * delegate the work to resize()!
 	 */
 	public static int[][] half(int[][] source) {
-		return null; // Fix Me
+		return resize(source,(int) Math.floor(source.length*0.5),(int) Math.floor(source[0].length*0.5));
 	}
 	
 	/**
@@ -48,22 +66,42 @@ public class PixelEffects {
 	 * @return the resized image
 	 */
 	public static int[][] resize(int[][] source, int[][] reference) {
-		return null; // Fix Me
+		return resize(source, reference.length, reference[0].length); // Fix Me
 	}
 
 	/** Flip the image vertically */
 	public static int[][] flip(int[][] source) {
-		return null;// Fix Me
+		int [][] flippedImage=new int[source.length][source[0].length];
+		for (int width = 0;width<flippedImage.length;width++){
+			for(int height = 0;height<flippedImage[0].length;height++){
+				flippedImage[width][height]=source[width][(flippedImage[0].length-1-height)];
+			}
+		}
+		return flippedImage;
 	}
 
 	/** Reverse the image horizontally */
 	public static int[][] mirror(int[][] source) {
-		return null;// Fix Me
+		int [][] mirrorImage = new int[source.length][source[0].length];
+		for (int width = 0; width<mirrorImage.length;width++){
+			for(int height = 0;height<mirrorImage[0].length;height++){
+				mirrorImage[width][height]=source[(mirrorImage.length-1-width)][height];
+			}
+		}
+		return mirrorImage;
 	}
 
 	/** Rotate the image */
 	public static int[][] rotateLeft(int[][] source) {
-		return null;
+		int[][] rotatedPic = new int [source[0].length][source.length];
+		for(int width = 0;width<rotatedPic.length;width++){
+			for(int height = 0;height<rotatedPic[0].length;height++){
+				int newWidth= rotatedPic[0].length-1-height;
+				int newHeight=width;
+				rotatedPic[width][height] = source[newWidth][newHeight];
+			}
+		}
+		return rotatedPic;
 	}
 
 	/** Merge the red,blue,green components from two images */
@@ -71,8 +109,28 @@ public class PixelEffects {
 		// The output should be the same size as the input. Scale (x,y) values
 		// when reading the background
 		// (e.g. so the far right pixel of the source is merged with the
-		// far-right pixel ofthe background).
-		return sourceA;
+		// far-right pixel of the background).
+		sourceB = resize(sourceB,sourceA.length,sourceA[0].length);
+		int[][] mergedPic = new int [sourceA.length][sourceA[0].length];
+		for(int bWidth=0;bWidth<sourceB.length;bWidth++){
+			for(int bHeight=0;bHeight<sourceB[0].length;bHeight++){
+				int redAPixel = RGBUtilities.toRed(sourceA[bWidth][bHeight]);
+				int greenAPixel = RGBUtilities.toGreen(sourceA[bWidth][bHeight]);
+				int blueAPixel = RGBUtilities.toBlue(sourceA[bWidth][bHeight]);
+				
+				int redBPixel = RGBUtilities.toRed(sourceB[bWidth][bHeight]);
+				int greenBPixel = RGBUtilities.toGreen(sourceB[bWidth][bHeight]);
+				int blueBPixel = RGBUtilities.toBlue(sourceB[bWidth][bHeight]);
+				
+				int newRedPixel = (int)(((redAPixel)+(redBPixel))/2);
+				int newGreenPixel = (int)(((greenAPixel)+(greenBPixel))/2);
+				int newBluePixel = (int)(((blueAPixel)+(blueBPixel))/2);
+				
+				mergedPic[bWidth][bHeight]=RGBUtilities.toRGB(newRedPixel,newGreenPixel,newBluePixel);
+				
+			}
+		}
+		return mergedPic;
 	}
 
 	/**
@@ -80,10 +138,26 @@ public class PixelEffects {
 	 * image
 	 */
 	public static int[][] chromaKey(int[][] foreImage, int[][] backImage) {
+		foreImage = resize(foreImage,backImage.length,backImage[0].length);
+		int[][] newPic = new int [backImage.length][backImage[0].length];
+		for (int width = 0; width < newPic.length; width++){
+			for(int height = 0; height < newPic[0].length; height++){
+				int newRed = RGBUtilities.toRed(foreImage[width][height]);
+				int newGreen = RGBUtilities.toGreen(foreImage[width][height]);
+				int newBlue = RGBUtilities.toBlue(foreImage[width][height]);
+				
+				if((newGreen > newRed) && (newGreen > newBlue)){
+					newPic[width][height] = backImage[width][height];
+				}
+				else {
+					newPic[width][height] = foreImage[width][height];
+				}
+			}
+		}
 		// If the image has a different size than the background use the
 		// resize() method
 		// create an image the same as the background size.
-		return foreImage;
+		return newPic;
 	}
 
 	/** Removes "redeye" caused by a camera flash. sourceB is not used */
@@ -112,6 +186,7 @@ public class PixelEffects {
 		
 		// Does not ask for any user input and returns a new 2D array
 		// Todo: remove this return null
-		return null;
+		sourceB = chromaKey(source, sourceB);
+		return sourceB;
 	}
 }
