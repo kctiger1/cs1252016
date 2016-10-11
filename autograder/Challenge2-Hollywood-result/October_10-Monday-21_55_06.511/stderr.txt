@@ -1,0 +1,13 @@
+SurveyOutput_1_101_98: program output matches expected output.
+SurveyOutput_3_5_11: program output matches expected output.
+HeaderFooter: program output matches expected output.
+LowercaseEntry: program output matches expected output.
+Find: program output matches expected output.
+FindCaseInsensitive: Expected 16 lines. Actual 12 lines.
+1. PASS > 'Please enter the word(s) to search for'
+2. PASS > 'Searching for 'Spoon''
+3. FAIL > '17 - The Boy smiles as Neo picks up a spoon and tries to' Should be - 
+3.        '12 - blocks.  A skinny BOY holds a SPOON which sways like a'
+FindCaseInsensitive: Program output above was incorrect on output line 3
+FindCaseInsensitive: ... Missing line #13 : 37 - There is no spoon.  Right.
+

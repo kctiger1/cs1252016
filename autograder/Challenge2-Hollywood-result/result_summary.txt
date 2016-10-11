@@ -1,3 +1,4 @@
 September_18-Sunday-12_18_44.75,kevinc3,Challenge2-Hollywood,1
 September_19-Monday-21_31_50.403,kevinc3,Challenge2-Hollywood,1
 September_30-Friday-23_36_49.213,kevinc3,Challenge2-Hollywood,90
+October_10-Monday-21_55_06.511,kevinc3,Challenge2-Hollywood,90

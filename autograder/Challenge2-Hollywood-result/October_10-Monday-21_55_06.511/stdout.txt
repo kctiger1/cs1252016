@@ -1,0 +1,15 @@
+.........F.
+Time: 0.034
+There was 1 failure:
+1) testFindCaseInsensitive(FindScriptLineTest)junit.framework.AssertionFailedError: Review incorrect output on line 3
+	at FindScriptLineTest.testFindCaseInsensitive(FindScriptLineTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:22)
+
+FAILURES!!!
+Tests run: 10,  Failures: 1,  Errors: 0
+
+9 passed out of 10
+Score=90
