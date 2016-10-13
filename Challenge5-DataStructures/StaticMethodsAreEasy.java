@@ -1,6 +1,8 @@
+//@author kevinc3
 public class StaticMethodsAreEasy {
 // Oh no... Someone removed  the methods but left the comments!!
 // Hint: Get the Geocache class working and passing its tests first.
+
 
 	/**
 	 * Returns an array of num geocaches. Each geocache is initialized to a random
