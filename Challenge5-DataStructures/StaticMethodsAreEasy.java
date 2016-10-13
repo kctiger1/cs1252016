@@ -12,6 +12,22 @@ public class StaticMethodsAreEasy {
 	 * @return array of newly minted Points
 	 */
 //write the method here...
+	public static Geocache[] createGeocaches(int num){
+		if (num <0){
+			Geocache[] nullGeocache = new Geocache[0];
+			return nullGeocache;
+		}
+		else{
+			Geocache[] geocache = new Geocache[num];
+				for (int i = 0; i<num;i++){
+					double x = Math.random()*100;
+					double y = Math.random()*100;
+					geocache[i] = new Geocache(x,y);
+			}
+			return geocache;
+		}
+		
+	}
 	
 	/**
 	 * Modifies geocaches if the geocache's X value is less than the allowable minimum
@@ -24,6 +40,16 @@ public class StaticMethodsAreEasy {
 	 * @return number of modified geocaches (i.e. x values were too small).
 	 */
 	//write the method here...
+	public static int ensureMinimumXValue(Geocache[]p, double minX){
+		int count=0;
+		for (int i = 0; i<p.length; i++){
+			if(p[i].getX() <  minX){
+				p[i].setX(minX);
+				count++;
+			}
+		}
+		return count;
+	}
 
 	/**
 	 * Counts the number of geocaches that are equal to the given geocache
@@ -35,4 +61,13 @@ public class StaticMethodsAreEasy {
 	 * @return number of matching geocaches
 	 */
 	//write the method here...
+	public static int countEqual(Geocache[]p, Geocache test){
+		int count = 0;
+		for (int i = 0; i < p.length; i++){
+			if (p[i].equals(test)) {
+				count++;
+			}
+		}
+		return count;
+	}
 }
