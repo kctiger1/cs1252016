@@ -23,7 +23,57 @@
  *   
  * Create a get method for id.
  * 
+ * @author kevinc3
  */
 class Geocache {
-
+	private double x;
+	private double y;
+	private int id;
+	private static int count;
+	
+	public double getX(){
+		return x;
+	}
+	public void setX(double x){
+		if (x>-1000 && x<1000)this.x=x;
+	}
+	public double getY(){
+		return y;
+	}
+	public void setY(double y){
+		this.y = y;
+	}
+	public int getId(){
+		return id;
+	}
+	public void setId(int id){
+		this.id = id;
+	}
+	public Geocache(double x1, double y1){
+		id = count;
+		count++;
+		x = x1;
+		y = y1;
+	}
+	public Geocache(Geocache other){
+		id = count;
+		count++;
+		x = other.x;
+		y = other.y;
+	}
+	public static int resetCount(){
+		count = 0;
+		return count;
+	}
+	public static int getNumGeocachesCreated(){
+		return count;
+	}
+	public boolean equals(Geocache ref){
+		if ((ref instanceof Geocache) && this.x==ref.x && this.y==ref.y)
+			return true;
+		return false;
+	}
+	public String toString(){
+		return ("(" + x + "," + y + ")");
+	}
 }
