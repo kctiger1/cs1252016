@@ -1,0 +1,10 @@
+Main: Expected 2 lines. Actual 5 lines.
+1. FAIL > 'Hello, this line is ignored' Should be - 
+1.        '.........................spam@nospam.com'
+Main: Program output above was incorrect on output line 1
+
+File CallAStaticMethod.java : @author line with your netid is missing.
+File Stack.java : @author line with your netid is missing.
+File Queue.java : @author line with your netid is missing.
+File KeyValueMap.java : @author line with your netid is missing.
+File GeocacheList.java : @author line with your netid is missing.
