@@ -35,7 +35,9 @@ class Geocache {
 		return x;
 	}
 	public void setX(double x){
-		if (x>-1000 && x<1000)this.x=x;
+		if (x>-1000 && x<1000){
+			this.x=x;
+		}
 	}
 	public double getY(){
 		return y;
@@ -69,8 +71,9 @@ class Geocache {
 		return count;
 	}
 	public boolean equals(Geocache ref){
-		if ((ref instanceof Geocache) && this.x==ref.x && this.y==ref.y)
+		if ((ref instanceof Geocache) && this.x==ref.x && this.y==ref.y){
 			return true;
+		}
 		return false;
 	}
 	public String toString(){
